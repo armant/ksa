@@ -86,17 +86,16 @@ USE_TZ = True
 TEMPLATE_DIRS = (
    os.path.join(os.path.dirname(__file__),'../templates'),
 )
-"""
-MEDIA_ROOT = '../ksa/media/'
+
+MEDIA_ROOT = '/home/ksa/ksa/media/'
 MEDIA_URL = '/media/'
 
+STATIC_ROOT = '/home/ksa/ksa/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
 os.path.join(BASE_DIR, "static"),
 '/var/www/static/',
 )
-"""
-
 """
 
 # Absolute path to the directory that holds media.
