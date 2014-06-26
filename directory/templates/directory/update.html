@@ -1,0 +1,10 @@
+<form enctype='multipart/form-data' action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>
+
+<a href = {% url 'imagestore:user' user.username %} target='_blank'>Редактировать альбомы и изображения</a>
+
+<a href="/">Отмена</a>
+
+<a href="/logout/">Log out</a>

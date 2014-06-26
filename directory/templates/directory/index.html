@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center><h2>Обращение президента</h2></center>
+
+{% if prez.president_photo %}
+	<img src={{ MEDIA_URL }}{{ prez.president_photo }} height='200' width='200' id='prez' class="white-frame">
+{% endif %}
+
+{% if prez.note %}
+	{{prez.note|linebreaks }}
+{% endif %}
+
+{% if prez.key_people %}
+	<center><h2>Прочие контакты</h2></center>
+<center>{{ prez.key_people|linebreaks }}</center>
+{% endif %}
+
+<div class="row">
+    <div class="col-sm-6">
+        <center><h3><a href="{{ prez.facebook_group }}" target="_blank">Официальная группа в Facebook</a></h3><!--<img src="{{ STATIC_URL }}img/facebook.png" alt="">--></center>
+    </div>
+    <div class="col-sm-6">
+        <center><h3><a href="http://www.kazakhembus.com/page/bolashak-contact-us" target="_blank">Представители "Болашақ" в США</a></h3><!--<img src="{{ STATIC_URL }}img/bolashak.jpg" alt="">--></center>
+    </div>
+</div>
+
+<center><h3>Группы в Facebook по специальностям</h3></center>
+<div class="row">
+    <div class="col-sm-4">
+        <center><a href="https://www.facebook.com/groups/477132862420847/" target="_blank">Agriculture</a></center>
+        <center><a href="https://www.facebook.com/groups/1445124539091293/" target="_blank">Art</a></center>
+        <center><a href="https://www.facebook.com/groups/287821224731736/" target="_blank">Biology and Chemistry</a></center>
+        <center><a href="https://www.facebook.com/groups/675761132477083/" target="_blank">Business and Economics</a></center>
+        <center><a href="https://www.facebook.com/groups/1400720803483804/" target="_blank">Computer Science</a></center>
+        <center><a href="https://www.facebook.com/groups/243762765817214/" target="_blank">Construction and Architecture</a></center>
+        <center><a href="https://www.facebook.com/groups/682508191831315/" target="_blank">Education</a></center>
+    </div>
+     <div class="col-sm-4">
+        <center><a href="https://www.facebook.com/groups/773923339307355/" target="_blank">Engineering Sciences</a></center>
+        <center><a href="https://www.facebook.com/groups/654724194614072/" target="_blank">Environmental Sciences</a></center>
+        <center><a href="https://www.facebook.com/groups/1438604853074631/"target="_blank">Families</a></center>
+        <center><a href="https://www.facebook.com/groups/765020896875926/" target="_blank">Government and Policy</a></center>
+        <center><a href="https://www.facebook.com/groups/1425211054426947/" target="_blank">Health Sciences</a></center>
+        <center><a href="https://www.facebook.com/groups/1470181926553711/" target="_blank">Human Resources</a></center>
+        <center><a href="https://www.facebook.com/groups/1426904884257753/" target="_blank">Internships</a></center>
+     </div>
+     <div class="col-sm-4">
+        <center><a href="https://www.facebook.com/groups/514198158707654/" target="_blank">Law</a></center>
+        <center><a href="https://www.facebook.com/groups/339230846228845/" target="_blank">Mechanical Engineering</a></center>
+        <center><a href="https://www.facebook.com/groups/684765368266833/" target="_blank">Petroleum Engineering</a></center>
+        <center><a href="https://www.facebook.com/groups/249445488584761/" target="_blank">Philological Sciences</a></center>
+        <center><a href="https://www.facebook.com/groups/469175499886526/" target="_blank">Physics and Mathematics</a></center>
+        <center><a href="https://www.facebook.com/groups/598761830230651/" target="_blank">Tourism and Sports</a></center>
+    </div>
+</div>
+
+
+<!--{% include "imagestore/album_list.html" %}-->
+{% if user.is_authenticated %}
+		    <a href="/directory/toupdate/">Обновить информацию</a>
+		    <a href="/gallery/album/add">Новый альбом</a>
+		    <a href="/gallery/upload">Новое изображение</a>
+		    <a href="/logout/">Log out</a>
+{% endif %}
+{% endblock %}

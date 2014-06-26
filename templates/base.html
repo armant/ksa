@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>	<!-- Styles -->
+		<title>Kazakh Students Associations{% block tab-name %}{% endblock %}</title>
+		<link type="text/css" href="{{ STATIC_URL }}css/imagestore.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.bxslider.min.js"></script>
+        <link type="text/css" href="{{ STATIC_URL }}css/jquery.bxslider.css" rel="stylesheet" />
+         <!-- Bootstrap CSS -->
+		<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="{{ STATIC_URL }}css/styles.css" rel="stylesheet">
+</head>
+<!--
+{% block title %}
+{% endblock %}
+
+{% block imagestore-breadcrumb %}
+{% endblock %}
+
+{% block imagestore-info %}
+{% endblock %}
+
+{% block imagestore-related %}
+{% endblock %}
+-->
+<body>
+	<!-- Head Start -->
+		<div class="b-shadow" id="head">
+			<div class="container">
+						<!-- Logo and Head Text -->
+						<div class="logo">
+							<!-- Logo Icon and Heading -->
+							<center><a href="/" id='title'>АССОЦИАЦИИ СТУДЕНТОВ КАЗАХСТАНА В США</a></center>
+						</div>
+			</div>
+		</div>
+		<!-- Menu Bar End -->
+		 <!-- Sidebar -->
+<div class="container-fluid" id="main-wrapper">
+      <div id="content-sidebar-wrapper" class="row">
+      
+    <div class="col-sm-offset-1 col-sm-7 detach">
+        <div class="content w-shadow">
+	    {% block back-to-album %}
+	    {% endblock %}
+
+	    {% block content %}
+	    {% endblock %}
+    </div>
+    </div>
+     
+      <div class="col-sm-3 col-sm-offset-1 detach">
+      <div class="sidebar-vcenter w-shadow">      
+          {% for ksa in ksa_list %}
+	          <p class="ksa-list"><a href="{% url 'directory.views.ksa_view' ksa.pk %}">{{ ksa.ksa_name }}</a></p>
+          {% endfor %}    
+      </div>
+      </div>
+	
+	</div>
+	</div>
+
+	<div id="footer" class="b-shadow">
+        Developed by <a href="https://www.linkedin.com/in/tokanov" target="_blank" class="underline">Arman</a>. Website photos by <a href="https://www.linkedin.com/pub/osama-ahmed/86/45/b78" target="_blank" class="underline">Osama</a>.
+    </div>
+
+</body>
+    
+    <script>
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({adaptiveHeight: true, mode: 'fade'});
+        });
+   </script>
+    
+    <script type="text/javascript">
+        var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg'];
+        $('body').css({'background-image': 'url({{ STATIC_URL }}img/' + images[Math.floor(Math.random() * images.length)] + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat',  'background-attachment': 'fixed', 'background-position': 'center'});
+    </script>
+    
+    <script>//re-calculate the needed height when resizing    
+        $( window ).resize(function() {
+        screen_height = $(window).height();
+        head_height = document.getElementById('head').offsetHeight;
+        content_height = document.getElementById('content-sidebar-wrapper').offsetHeight;
+        needed_height = Math.max(screen_height - head_height, content_height);
+        console.log(screen_height - head_height);
+        console.log(content_height);
+        console.log(needed_height);
+        document.getElementById('main-wrapper').style.height = needed_height + "px";
+        }).resize();
+    </script>
+</html>

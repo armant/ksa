@@ -1,0 +1,156 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+a{
+	color: black;
+}
+
+a:hover{
+	color: #0077b7 !important;
+	text-decoration: none;
+}
+
+a:hover,a:active,a:focus {
+	outline: 0;
+}
+
+:focus {
+	outline:none;
+}
+
+::-moz-focus-inner {
+	border:0;
+}
+
+form *{
+	box-shadow: none !important;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+fotm textarea{
+	font-size: 13px !important;
+}
+
+#title {
+    font-size: 50px;
+    line-height: 220%;
+}
+
+.w-shadow #title {
+    color: black !important;
+}
+
+.b-shadow #title {
+    color: white !important;
+}
+
+.container-fluid {
+    
+    padding-right: 0px;
+    margin-bottom: -24px;
+}
+
+.w-shadow {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+	/*border: 1px solid rgba(0, 0, 0, 0.5);*/
+}
+
+.b-shadow {
+    background: rgba(0, 0, 0, 0.2);
+    color: white !important;
+	/*border: 1px solid rgba(0, 0, 0, 0.5);*/
+}
+
+.ksa-list {
+    margin: 0px 20px 0px 20px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.b-shadow a {
+    color: white;
+}
+.sidebar-vcenter {
+    float: right;
+    margin-right: -15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+html, body {height: 100%;}
+
+#footer {
+	font-size: 12px;
+    margin-top: -24px;
+    text-align:center;
+    line-height: 24px;
+}
+
+a.underline {
+    text-decoration:underline;
+}
+
+html, body{height:100%}
+
+
+#head {
+    color: red;
+}
+
+#content-sidebar-wrapper {
+    min-height: 634px;
+    padding-bottom: 24px;    
+}
+.detach {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.content {
+    padding: 20px;
+}
+
+img#prez {
+    float: left;
+    margin-top: 6px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+img.avatar {
+    margin-bottom: 0px;
+}
+
+.white-frame {
+    border: 4px solid #fff;
+    -webkit-border-radius: 2px;
+}
+
+.album-list {
+    display: inline-block;
+}
+ul {
+    height: 700px;
+    padding: 0px;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
