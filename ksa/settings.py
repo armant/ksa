@@ -87,7 +87,7 @@ TEMPLATE_DIRS = (
    os.path.join(os.path.dirname(__file__),'../templates'),
 )
 
-MEDIA_ROOT = '/home/ksa/ksa/media/'
+MEDIA_ROOT = '/home/ksa/ksa.pythonanywhere.com/media/'
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = '/home/ksa/ksa/static/'
