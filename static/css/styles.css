@@ -118,7 +118,7 @@ html, body{height:100%}
     padding: 20px;
 }
 
-img#prez {
+#prez {
     float: left;
     margin-top: 6px;
     margin-right: 20px;
@@ -130,8 +130,10 @@ h1, h2 {
     margin-bottom:30px;
 }
 
-img.avatar {
+.avatar {
     margin-bottom: 0px;
+    height: 200px;
+    width: 200px;
 }
 
 .white-frame {
@@ -152,5 +154,3 @@ ul {
     margin-left: auto;
     margin-right: auto
 }
-
-
