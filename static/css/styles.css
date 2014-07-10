@@ -52,13 +52,13 @@ fotm textarea{
 }
 
 .container-fluid {
-    
+
     padding-right: 0px;
     margin-bottom: -24px;
 }
 
 .w-shadow {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     color: black;
 	/*border: 1px solid rgba(0, 0, 0, 0.5);*/
 }
@@ -107,7 +107,7 @@ html, body{height:100%}
 
 #content-sidebar-wrapper {
     min-height: 634px;
-    padding-bottom: 24px;    
+    padding-bottom: 24px;
 }
 .detach {
     margin-top: 100px;

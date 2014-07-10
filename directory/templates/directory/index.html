@@ -4,7 +4,7 @@
 <center><h2>Обращение президента</h2></center>
 
 {% if prez.president_photo %}
-    <div id='prez' class="avatar white-frame" style="background: url({{ MEDIA_URL }}{{ prez.president_photo }}); background-size: cover;">    </div>
+    <div id='prez' class="avatar white-frame" style="background: url({{ MEDIA_URL }}{{ prez.president_photo }}); background-size: cover; background-position: center;">    </div>
 {% endif %}
 
 {% if ksa_instance.president_photo %}

@@ -8,7 +8,7 @@
 <center><h1>{{ ksa_instance.ksa_name }}</p></h1></center>
 
 {% if ksa_instance.president_photo %}
-	<center><div class="avatar white-frame" style="background: url({{ MEDIA_URL }}{{ ksa_instance.president_photo }}); background-size: cover;"></div></center>
+	<center><div class="avatar white-frame" style="background: url({{ MEDIA_URL }}{{ ksa_instance.president_photo }}); background-size: cover; background-position: center;"></div></center>
 {% endif %}
 
 {% if ksa_instance.president_name %}
@@ -65,5 +65,5 @@
             {% endif %}
         {% endfor %}
     </div>
-	
+
 {% endblock %}
