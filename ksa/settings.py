@@ -17,17 +17,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'yxoel-em^5pd%or^orpaxl=6n9dl#5u@!yuc0j@o20m%bx93l%'
-
-with open('key.txt') as f:
-    SECRET_KEY = f.read().strip()
+SECRET_KEY = 'yxoel-em^5pd%or^orpaxl=6n9dl#5u@!yuc0j@o20m%bx93l%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['ksa.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -90,10 +87,9 @@ TEMPLATE_DIRS = (
    os.path.join(os.path.dirname(__file__),'../templates'),
 )
 
-MEDIA_ROOT = '/var/www/static/media'
+MEDIA_ROOT = '../ksa/media/'
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = '/home/ksa/ksa/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
 os.path.join(BASE_DIR, "static"),

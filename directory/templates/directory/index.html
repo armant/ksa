@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+{% load thumbnail %}
+
+
+{% block main-slideshow %}
+    <ul class="bxslider" id="main-slider">
+       {% for image in image_list %}
+           <li>
+               {% thumbnail image.image "800x600"  as im %}
+                   <img class="white-frame centered" {% if image.title %} alt="{{ image.title }}" {% endif %} src="{{ im.url }}">
+               {% endthumbnail %}
+           </li>
+       {% endfor %}
+    </ul>
+{% endblock %}
+
 {% block content %}
 <center><h2>Обращение президента</h2></center>
 
@@ -68,4 +83,14 @@
 		    <a href="/gallery/upload">Новое изображение</a>
 		    <a href="/logout/">Log out</a>
 {% endif %}
+{% endblock %}
+
+
+{% block bxslider %}
+    <script>
+        $(document).ready(function(){
+            slider = $('.bxslider').bxSlider({mode: 'fade'});
+            slider.startAuto();
+        });
+   </script>
 {% endblock %}

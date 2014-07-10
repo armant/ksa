@@ -60,4 +60,11 @@
 	<center><a href = {% url 'ksa_view' album.user.ksa.id %}>Назад на {{ album.user.ksa }}</a></center>
 {% endblock %}
 
+{% block bxslider %}
+    <script>
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({adaptiveHeight: true, mode: 'fade'});
+        });
+   </script>
+{% endblock %}
 

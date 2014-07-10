@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.http import Http404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from random import sample
 
 #copied from Imagestore
 from django.core.exceptions import PermissionDenied
@@ -30,10 +31,11 @@ from imagestore.views import AlbumListView
 
 # Create your views here.
 def index(request):
-	ksa_list = KSA.objects.all().order_by('ksa_name')
-	prez = KSA.objects.get(pk=4)
-	album_list = Album.objects.filter(is_public=True).select_related('head')
-	return render(request, 'directory/index.html', {'ksa_list': ksa_list, 'prez': prez, 'album_list': album_list})
+    ksa_list = KSA.objects.all().order_by('ksa_name')
+    prez = KSA.objects.get(pk=4)
+    image_list = Image.objects.all().order_by('?')[:5]
+    album_list = Album.objects.filter(is_public=True).select_related('head')
+    return render(request, 'directory/index.html', {'ksa_list': ksa_list, 'prez': prez, 'album_list': album_list, 'image_list': image_list})
 
 def ksa_view(request, pk):
     ksa_list = KSA.objects.all().order_by('ksa_name')

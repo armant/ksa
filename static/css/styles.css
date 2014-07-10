@@ -145,7 +145,7 @@ h1, h2 {
     display: inline-block;
 }
 ul {
-    height: 700px;
+    min-height: 700px;
     padding: 0px;
 }
 
@@ -153,4 +153,10 @@ ul {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+
+
+#main-slider {
+    margin-top: 50px;
 }
