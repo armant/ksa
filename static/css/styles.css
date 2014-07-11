@@ -172,3 +172,11 @@ ul {
         top: 0;
     }
 }
+
+@media (max-device-width: 902px) { 
+    .sidebar-vcenter.affix {
+        position: static;
+        width: auto;
+        top: 0;
+    }
+}

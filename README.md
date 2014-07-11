@@ -2,8 +2,8 @@ Kazakh Students Associations' website
 =====================================
 
 This is a directory website for Kazakh Students Associations in the
-United States. Supports user authentication, custom profiles, and an
-image gallery.
+United States. Supports user authentication, custom profiles, an image
+gallery. Responsive and mobile-friendly.
 
 Powered by Django.
 
