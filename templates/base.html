@@ -5,6 +5,7 @@
 		<link type="text/css" href="{{ STATIC_URL }}css/imagestore.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
         <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.bxslider.min.js"></script>
         <link type="text/css" href="{{ STATIC_URL }}css/jquery.bxslider.css" rel="stylesheet" />
@@ -45,7 +46,7 @@
 
       <div id="content-sidebar-wrapper" class="row">
 
-    <div class="col-sm-8 detach">
+    <div class="col-sm-offset-1 col-sm-7 detach">
         <div class="content w-shadow">
 	    {% block back-to-album %}
 	    {% endblock %}
@@ -95,4 +96,13 @@
         document.getElementById('main-wrapper').style.height = needed_height + "px";
         }).resize();
     </script>
+    
+    <script>
+      $('.sidebar-vcenter').affix({
+          offset: {
+              top: 210
+          }
+       });
+    </script>
+    
 </html>

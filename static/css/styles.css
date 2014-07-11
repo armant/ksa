@@ -144,8 +144,9 @@ h1, h2 {
 .album-list {
     display: inline-block;
 }
+
 ul {
-    min-height: 700px;
+    height: 700px;
     padding: 0px;
 }
 
@@ -155,8 +156,19 @@ ul {
     margin-right: auto
 }
 
-
-
 #main-slider {
-    margin-top: 50px;
+    margin-top: 15px;
+}
+
+.sidebar-vcenter.affix {
+    right: 15px;
+    top: 0;
+}
+
+@media (max-width: 902px) { 
+    .sidebar-vcenter.affix {
+        position: static;
+        width: auto;
+        top: 0;
+    }
 }
