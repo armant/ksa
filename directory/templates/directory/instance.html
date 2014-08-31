@@ -38,6 +38,10 @@
 	<center>{{ ksa_instance.note|linebreaks }}</center>
 {% endif %}
 
+{% if albums %}
+    <center><h2>Альбомы</h2></center>
+{% endif %}
+
     <div class='album-list'>
         {% for album in albums %}
             {% if album.get_head  or album.user == request.user %}
